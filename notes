@@ -1,0 +1,44 @@
+Private DockerHub repository-ku Jenkins CI/CD use panni image push panna mudiyum.
+
+Naan simple ah step-by-step sollren 👇
+
+🔹 Requirements
+
+DockerHub account (private repo create pannirukanum)
+
+DockerHub Access Token (password-ku badhila)
+
+Jenkins server (Docker installed)
+
+Jenkins credentials la DockerHub creds add pannirukanum
+
+🔹 Step 1: DockerHub la Private Repository
+
+DockerHub → Create Repository
+
+Name: username/myapp
+
+Visibility: Private
+
+🔹 Step 2: DockerHub Access Token create pannu
+
+DockerHub →
+Account Settings → Security → New Access Token
+
+✔ Copy panni vachiko
+
+🔹 Step 3: Jenkins la Credentials add pannu
+
+Manage Jenkins → Credentials → (global) → Add Credentials
+
+Kind: Username with password
+
+Username: DockerHub username
+
+Password: Access Token
+
+ID: dockerhub-creds
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+jenkin pipeline script paste and build now
